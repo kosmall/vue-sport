@@ -25,5 +25,11 @@ export default typescriptEslint.config(
       'vue/multi-word-component-names': 'off',
     },
   },
+  {
+    files: ['**/*.spec.ts'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
   eslintConfigPrettier,
 );

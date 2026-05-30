@@ -4,7 +4,9 @@ import App from './App.vue';
 
 describe('App', () => {
   it('renders the root element', () => {
-    const wrapper = mount(App);
+    const wrapper = mount(App, {
+      global: { stubs: { RouterView: { template: '<div />' } } },
+    });
     expect(wrapper.exists()).toBe(true);
   });
 });
