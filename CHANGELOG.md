@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/kosmall/vue-sport/compare/v1.0.1...v1.1.0) (2026-05-31)
+
+
+### Features
+
+* add leagues api service, types, and composables ([7b75a5b](https://github.com/kosmall/vue-sport/commit/7b75a5b054e26463166bffdaba556fa159b8875d))
+
 ## [1.0.1](https://github.com/kosmall/vue-sport/compare/v1.0.0...v1.0.1) (2026-05-31)
 
 
