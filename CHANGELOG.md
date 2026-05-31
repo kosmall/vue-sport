@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/kosmall/vue-sport/compare/v1.1.0...v1.2.0) (2026-05-31)
+
+
+### Features
+
+* add league selector screen and update routing ([32ad3b0](https://github.com/kosmall/vue-sport/commit/32ad3b03dc77e26104c16c87364beb770fe74dcc))
+* add league selector screen and update routing ([94cda19](https://github.com/kosmall/vue-sport/commit/94cda1996c33bb50bd204c3f7ae92f780a0240d2))
+
 ## [1.1.0](https://github.com/kosmall/vue-sport/compare/v1.0.1...v1.1.0) (2026-05-31)
 
 
