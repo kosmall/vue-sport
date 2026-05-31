@@ -32,7 +32,7 @@ By default the app uses API key `3` (TheSportsDB free tier). To use a different
 (for eg. premium) key, set it before starting:
 
 ```bash
-VITE_SPORTS_DB_KEY=your_key
+VITE_API_KEY=your_key
 ```
 
 There is also an Express server that serves the built SPA using EJS to inject
