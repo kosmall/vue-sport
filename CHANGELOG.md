@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.2](https://github.com/kosmall/vue-sport/compare/v1.2.1...v1.2.2) (2026-05-31)
+
+
+### Bug Fixes
+
+* use VITE_BASE_URL env var for vite base path instead of GITHUB_A… ([957e78e](https://github.com/kosmall/vue-sport/commit/957e78eb313b6587f3efddbb18427c77235d997a))
+* use VITE_BASE_URL env var for vite base path instead of GITHUB_ACTIONS flag ([ca57343](https://github.com/kosmall/vue-sport/commit/ca5734382a2f6f95ef6c862d839c64cf83758ae3))
+
 ## [1.2.1](https://github.com/kosmall/vue-sport/compare/v1.2.0...v1.2.1) (2026-05-31)
 
 
