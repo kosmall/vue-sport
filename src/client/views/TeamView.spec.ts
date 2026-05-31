@@ -12,7 +12,7 @@ function createTestRouter() {
   const router = createRouter({
     history: createMemoryHistory(),
     routes: [
-      { path: '/', name: 'teams', component: { template: '<div />' } },
+      { path: '/', name: 'leagues', component: { template: '<div />' } },
       { path: '/team/:id', name: 'team', component: TeamView },
     ],
   });
