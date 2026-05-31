@@ -43,7 +43,7 @@
   <div class="min-h-screen bg-gray-100">
     <div class="mx-auto max-w-3xl px-4 py-8">
       <button
-        class="mb-6 inline-block text-sm text-blue-600 hover:underline"
+        class="mb-6 inline-block text-sm text-blue-600 hover:underline cursor-pointer"
         @click="router.go(-1)"
       >
         Back to teams
