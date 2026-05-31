@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/kosmall/vue-sport/compare/v1.0.0...v1.0.1) (2026-05-31)
+
+
+### Bug Fixes
+
+* add 404.html fallback for spa routing on github pages ([0174c68](https://github.com/kosmall/vue-sport/commit/0174c68bcc91d170f98438a36015989bbbdae738))
+* add 404.html fallback for spa routing on github pages ([80d42d6](https://github.com/kosmall/vue-sport/commit/80d42d6582fd616dffcad1e4ba6dd4c07a0e10e3))
+
 ## 1.0.0 (2026-05-31)
 
 
