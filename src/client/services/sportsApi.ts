@@ -3,7 +3,7 @@ import type { AxiosInstance } from 'axios';
 import type { Team, TeamsResponse } from '@/types/team';
 import type { League, LeaguesResponse } from '@/types/league';
 
-const API_KEY = import.meta.env.VITE_SPORTS_DB_KEY ?? '3';
+const API_KEY = import.meta.env.VITE_API_KEY ?? '3';
 
 const http: AxiosInstance = axios.create({
   baseURL: `https://www.thesportsdb.com/api/v1/json/${API_KEY}`,
