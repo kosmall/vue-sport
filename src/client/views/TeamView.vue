@@ -1,9 +1,10 @@
 <script setup lang="ts">
   import { computed } from 'vue';
-  import { useRoute, RouterLink } from 'vue-router';
+  import { useRoute, useRouter } from 'vue-router';
   import { useTeam } from '@/composables/useTeam';
 
   const route = useRoute();
+  const router = useRouter();
   const id = computed(() => route.params.id as string);
   const { isPending, isError, data: team, error } = useTeam(id);
 
@@ -41,12 +42,12 @@
 <template>
   <div class="min-h-screen bg-gray-100">
     <div class="mx-auto max-w-3xl px-4 py-8">
-      <RouterLink
-        :to="{ name: 'teams' }"
+      <button
         class="mb-6 inline-block text-sm text-blue-600 hover:underline"
+        @click="router.go(-1)"
       >
         Back to teams
-      </RouterLink>
+      </button>
 
       <div v-if="isPending" class="text-center text-gray-500">Loading...</div>
       <div v-else-if="isError" class="text-center text-red-500">

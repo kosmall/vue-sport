@@ -5,6 +5,11 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'leagues',
+      component: () => import('@/views/LeaguesView.vue'),
+    },
+    {
+      path: '/league/:leagueKey/teams',
       name: 'teams',
       component: () => import('@/views/TeamsView.vue'),
     },
