@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
-  base: process.env.GITHUB_ACTIONS ? '/vue-sport/' : '/',
+  base: process.env.VITE_BASE_URL ?? '/',
   plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {
