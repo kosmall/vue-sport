@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/kosmall/vue-sport/compare/v1.2.0...v1.2.1) (2026-05-31)
+
+
+### Bug Fixes
+
+* fix return button cursor on TeamView ([0b1c5c5](https://github.com/kosmall/vue-sport/commit/0b1c5c58afefcc2fd04005c14c2b2a4942a5847b))
+* fix return button cursor on TeamView ([520f1ba](https://github.com/kosmall/vue-sport/commit/520f1ba190fa903a2714e527ca430592d06e9ce3))
+
 ## [1.2.0](https://github.com/kosmall/vue-sport/compare/v1.1.0...v1.2.0) (2026-05-31)
 
 
