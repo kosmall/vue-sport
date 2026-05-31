@@ -1,17 +1,22 @@
 import axios from 'axios';
 import type { AxiosInstance } from 'axios';
 import type { Team, TeamsResponse } from '@/types/team';
+import type { League, LeaguesResponse } from '@/types/league';
 
 const API_KEY = import.meta.env.VITE_SPORTS_DB_KEY ?? '3';
-const PREMIER_LEAGUE_KEY = 'English_Premier_League';
 
 const http: AxiosInstance = axios.create({
   baseURL: `https://www.thesportsdb.com/api/v1/json/${API_KEY}`,
 });
 
-export async function fetchTeams(): Promise<Team[]> {
+export async function fetchLeagues(): Promise<League[]> {
+  const { data } = await http.get<LeaguesResponse>('/all_leagues.php');
+  return data.leagues ?? [];
+}
+
+export async function fetchTeams(leagueKey: string): Promise<Team[]> {
   const { data } = await http.get<TeamsResponse>('/search_all_teams.php', {
-    params: { l: PREMIER_LEAGUE_KEY },
+    params: { l: leagueKey },
   });
   return data.teams ?? [];
 }
