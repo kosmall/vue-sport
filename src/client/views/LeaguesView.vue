@@ -18,9 +18,7 @@
 </script>
 
 <template>
-  <div
-    class="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-8"
-  >
+  <div class="flex min-h-screen flex-col items-center bg-gray-100 p-8">
     <h1 class="mb-6 text-4xl font-bold text-blue-600">Sports Browser</h1>
     <span v-if="isPending">Loading...</span>
     <span v-else-if="isError">Error: {{ error?.message }}</span>

@@ -10,9 +10,7 @@
 </script>
 
 <template>
-  <div
-    class="flex min-h-screen flex-col items-center justify-center bg-gray-100 p-8"
-  >
+  <div class="flex min-h-screen flex-col items-center bg-gray-100 p-8">
     <RouterLink
       :to="{ name: 'leagues' }"
       class="mb-4 w-full max-w-md text-sm text-blue-600 hover:underline"
