@@ -15,9 +15,21 @@ Live: https://kosmall.github.io/vue-sport/
 - TanStack Query for data fetching and caching
 - Tailwind CSS
 - Axios
-- EJS templating engine for the Express server entry point
+- EJS templating engine (Express SSR for landing page, asset injection for SPA)
 - Vitest
 - Playwright
+
+## Architecture
+
+The app splits rendering responsibilities between EJS and Vue based on content type:
+
+- **Landing page** (`/`): server-rendered by EJS. No JavaScript required, fast load, crawler-friendly.
+- **Browser app** (`/leagues` and deeper): a Vue 3 SPA. All data comes from TheSportsDB API
+  client-side, where Vue's reactivity and TanStack Query caching add real value. SSR for
+  these views would require duplicating API calls server-side with minimal gain, since the
+  data is dynamic and user-driven.
+
+Static presentational content lives in EJS, dynamic data-driven views live in Vue.
 
 ## Getting started
 
@@ -35,8 +47,7 @@ By default the app uses API key `3` (TheSportsDB free tier). To use a different
 VITE_API_KEY=your_key
 ```
 
-There is also an Express server that serves the built SPA using EJS to inject
-the correct hashed asset paths from the Vite manifest:
+To run the full server (Express + EJS landing page):
 
 ```bash
 npm run build

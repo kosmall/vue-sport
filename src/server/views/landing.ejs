@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Browser</title>
+    <% if (cssFile) { %>
+    <link rel="stylesheet" href="<%= cssFile %>" />
+    <% } %>
+  </head>
+  <body class="flex min-h-screen flex-col bg-gray-100 font-sans text-gray-900">
+
+    <header class="bg-blue-700 px-8 py-16 text-center text-white">
+      <h1 class="text-5xl font-bold">Sports Browser</h1>
+      <p class="mx-auto mt-4 max-w-md text-lg leading-relaxed text-blue-200">
+        Browse football leagues and explore team details powered by TheSportsDB.
+      </p>
+      <a
+        href="/leagues"
+        class="mt-8 inline-block rounded-lg bg-white px-8 py-3 font-semibold text-blue-700 transition-colors hover:bg-blue-50"
+      >
+        Browse Leagues
+      </a>
+    </header>
+
+    <main class="mx-auto w-full max-w-3xl flex-1 px-6 py-12">
+      <div class="grid gap-6 sm:grid-cols-3">
+        <div class="rounded-xl bg-white p-6 shadow">
+          <h3 class="mb-2 font-semibold text-blue-700">League Search</h3>
+          <p class="text-sm leading-relaxed text-gray-500">
+            Filter through football leagues by name and jump straight to the one you want.
+          </p>
+        </div>
+        <div class="rounded-xl bg-white p-6 shadow">
+          <h3 class="mb-2 font-semibold text-blue-700">Team Profiles</h3>
+          <p class="text-sm leading-relaxed text-gray-500">
+            View squad badges, stadium details, founding year, and social links for every team.
+          </p>
+        </div>
+        <div class="rounded-xl bg-white p-6 shadow">
+          <h3 class="mb-2 font-semibold text-blue-700">Live Data</h3>
+          <p class="text-sm leading-relaxed text-gray-500">
+            All data is fetched from TheSportsDB API and cached client-side for fast navigation.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-8 text-center text-xs text-gray-400">
+      Built with Express, EJS and Vue 3
+    </footer>
+
+  </body>
+</html>
