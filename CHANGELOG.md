@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/kosmall/vue-sport/compare/v1.2.2...v1.3.0) (2026-06-01)
+
+
+### Features
+
+* add EJS landing page at root route ([c69ad42](https://github.com/kosmall/vue-sport/commit/c69ad42f2b98491a56c1727b2c897acb090d45fc))
+
 ## [1.2.2](https://github.com/kosmall/vue-sport/compare/v1.2.1...v1.2.2) (2026-05-31)
 
 
