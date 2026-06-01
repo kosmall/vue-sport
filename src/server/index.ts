@@ -15,20 +15,26 @@ const PORT = Number(process.env.PORT) || 3000;
 const manifest: Record<string, ManifestEntry> = JSON.parse(
   readFileSync(path.join(distDir, '.vite/manifest.json'), 'utf-8'),
 );
-const entry = manifest['src/client/main.ts'];
+const entry = manifest['index.html'];
 
 const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static(distDir));
+app.use(express.static(distDir, { index: false }));
+
+app.get('/', (_req, res) => {
+  res.render('landing', {
+    cssFile: entry.css?.[0] ? `/${entry.css[0]}` : null,
+  });
+});
 
 app.use((_req, res) => {
   res.render('index', {
-    title: 'Premier League Teams',
-    jsFile: `/assets/${entry.file}`,
-    cssFile: entry.css?.[0] ? `/assets/${entry.css[0]}` : null,
+    title: 'Sports Browser',
+    jsFile: `/${entry.file}`,
+    cssFile: entry.css?.[0] ? `/${entry.css[0]}` : null,
   });
 });
 
