@@ -68,8 +68,8 @@
       <TeamStadium
         v-if="team.strStadium"
         :name="team.strStadium"
-        :thumb="team.strStadiumThumb"
-        :capacity="team.intStadiumCapacity"
+        :thumb="team.strStadiumThumb ?? null"
+        :capacity="team.intStadiumCapacity ?? null"
       />
       <TeamLinks v-if="socialLinks.length" :links="socialLinks" />
     </template>
